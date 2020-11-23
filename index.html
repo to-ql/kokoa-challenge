@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+    <!--link:css 입력 후 tap-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <!--부모와 자식이 함께 보이게끔 네이밍..-->
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>01:16</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa Account, log in with your email or phone number.
+      </p>
+    </header>
+    <!--
+    [form의 중요한 속성 두 가지]
+    action은 어떤 페이지로 데이터를 보낼건지 지정,
+    method는 POST와 GET두 가지 방식이 있는데 POST는 백엔드 서버에서 정보를 전송하는 방식이고
+    GET은 보안에 취약하기 때문에 URL에 포함되어도 상관없는 정보들을 내보낼 때 사용/
+    -->
+    <form action="friends.html" method="get" id="login-form">
+      <input name="username" type="text" placeholder="Email or phone number" />
+      <input name="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <input type="submit" value="Sign Up" />
+      <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <div id="no-mobile">
+      <span>Your screen is too big ㅠㅠ</span>
+    </div>
+    <!--스크립트는 항상 바디 태그를 닫기 직전에 적어야함-->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorgin="anonysmous"
+    ></script>
+  </body>
+</html>
+
+<!--BEM(Block Element Modifier) -> 코드를 쉽게 이해하기 위해서 사용-->
