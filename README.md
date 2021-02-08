@@ -1,1 +1,1 @@
-# kokoa challenge
+# kokoa-challenge
